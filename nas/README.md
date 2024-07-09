@@ -61,6 +61,5 @@ Poniżej użyte sekcje panelu administracyjnego do konfiguracji serwera
 
 - dodano serwer do Active Directory według poradnika: https://forum.openmediavault.org/index.php?thread/42307-omv-6-x-rc1-active-directory/
 
-
-**Źródła:**
+## Źródła 
 - dołączenie serwera do domeny: https://forum.openmediavault.org/index.php?thread/42307-omv-6-x-rc1-active-directory/

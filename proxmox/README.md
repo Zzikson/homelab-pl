@@ -62,7 +62,7 @@
     - dysk: 85GB
     - VLAN: 30
 
-**Źródła:**
+## Źródła
 - https://pve.proxmox.com/pve-docs/pve-admin-guide.html
 - obrazy iso:
     - Alpine: https://www.alpinelinux.org/downloads/

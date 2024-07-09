@@ -305,7 +305,7 @@ Po instalacji serwera, podłączono go do domeny. Instalacja AD przebiegła tak 
 - Additional Options:
     - Relicate from AD-01.dziki.lab
 
-**Źródła:**
+## Źródła
 - zmiana strefy czasowej: https://youtu.be/ZQmkBY3SgK8
 - konfiguracja licznika aging, scavenging: https://youtu.be/4EmeijbM8X4
 - FSRM: https://youtu.be/eTCTGCi3uHg https://youtu.be/Xv7WOII9wt8

@@ -101,7 +101,7 @@
 - dodano zasadę do zapory ogniowej na interfejsie Ovpn01 pozwalający na dostęp do sieci lokalnych za firewallem:
     - na panelu na lewo: firewall -> Rules -> Ovpn01
 
-**Źródła:**
+## Źródła
 - Konfiguracja VLANów: https://youtu.be/UI5tO1hP2q8?t=455
 - Polecenie pozwalające dodać kilka VLAN tagów na jeden wirtualny interfejs: https://forum.proxmox.com/threads/how-do-i-assign-multiple-vlans-to-a-vm.130435/
 - Konfiguracja OpenVPN: https://youtu.be/3A5eIYs6adk

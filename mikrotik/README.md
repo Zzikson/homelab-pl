@@ -1,6 +1,7 @@
 ## Winbox 
 
 Przed przystąpieniem do konfiguracji zainstalowano klient WinBox według poradnika:
+
 [![Jak zainstalować WinBox'a na Linuxie?](https://img.youtube.com/vi/2jjtK5Me29I/0.jpg)](https://www.youtube.com/watch?v=2jjtK5Me29I)
 
 Pobrano z repozytorium AUR na dystrybucji Arch Linux:
@@ -289,7 +290,7 @@ add action=drop chain=forward \
     - 172.17.20.0/28 -> 172.17.17.3
     - 172.17.30.0/28 -> 172.17.17.3
 
-**Źródła:**
+## Żródła 
 1. Dokumentacja: https://help.mikrotik.com/docs/
     - budowa zapory ogniowej:
         - https://help.mikrotik.com/docs/display/ROS/Building+Your+First+Firewall
