@@ -1,7 +1,3 @@
-# Konfiguracja NGFW - OPNsense
-
-![Logo OPNsense](https://www.landitec.com/wp-content/uploads/2019/12/opnsense.png)
-
 ## Wstępna konfiguracja
 
 **System:**

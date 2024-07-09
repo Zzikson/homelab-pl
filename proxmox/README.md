@@ -1,9 +1,3 @@
-# Konfiguracja hipernadzorcy - Proxmox
-
-![Logo Proxmoxa](https://brands.home-assistant.io/_/proxmoxve/logo.png)
-
-[TOCM]
-
 ## Konfiguracja hosta
 
 - nazwa node'a: proxie

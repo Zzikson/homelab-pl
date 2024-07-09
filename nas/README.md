@@ -1,6 +1,4 @@
-![Logo OMV](https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.LAq519ktOkV99u5V8x9a0QHaHa%26pid%3DApi&sp=1717255752T8f07759b7070deb51e8736cd61e88a8d6f8b1b6ee1d9766be9f2e9a1096d7abf)
-
-[TOCM]
+## Konfiguracja
 
 Poniżej użyte sekcje panelu administracyjnego do konfiguracji serwera
 

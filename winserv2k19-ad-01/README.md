@@ -1,7 +1,3 @@
-![Logo Windowsa](https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fgitlab.ics.muni.cz%2Fuploads%2F-%2Fsystem%2Fproject%2Favatar%2F1939%2Fwindows-server-logo.png&sp=1717330678T9010a351fd91c27d60f1a010627868c1d70bca6a7aa781d64ce282dbf1ae36c4)
-
-# Konfiguracja Windows Server 
-
 ## Wstępna konfiguracja obu hostów (Przed dołączniem do domeny)
 
 **System był konfigurowany w języku angielskim**

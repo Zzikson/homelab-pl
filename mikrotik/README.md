@@ -1,9 +1,3 @@
-![Logo Mikrotika](https://merch.mikrotik.com/cdn/shop/files/512.png?v=1657867177)
-
-# Konfiguracja routera SOHO - Mikrotik
-
-[TOCM]
-
 ## Winbox 
 
 Przed przystąpieniem do konfiguracji zainstalowano klient WinBox według poradnika:
