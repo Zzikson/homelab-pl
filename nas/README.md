@@ -4,7 +4,7 @@
 
 Poniżej użyte sekcje panelu administracyjnego do konfiguracji serwera
 
-System:
+**System:**
 - panel administracyjny używa certfikatu SSL
 - ustawiono automatyczne wylogowywanie po 5 minutach bezczynności
 - ustawiono strefę czasową: Europe/Warsaw
@@ -14,10 +14,10 @@ System:
     - lvm
     - omvextrasorg
 
-Services:
+**Services:**
 - skonfigurowano logowanie ssh przez klucz prywatny
 
-Storage:
+**Storage:**
 - LVM:
     - utworzono fizyczny wolumin: /dev/md0
     - utworzono grupę woluminów: VG-01
@@ -34,7 +34,7 @@ Storage:
     - Family-Fileshare
     - WSUS
 
-Services:
+**Services:**
 - File Browser:
 - dodano dwa udziały: AD-Profiles, WSUS
     - port: 3670
@@ -46,7 +46,7 @@ Services:
     - port: 2223
     - włączone jedynie uwierzytelnienie przez klucz publiczny  
 
-Users:
+**Users:**
 - dodano nowych użytkowników:
     - family-share - dla File Browser
     - server-share - dla SMB
@@ -64,5 +64,5 @@ Users:
 - dodano serwer do Active Directory według poradnika: https://forum.openmediavault.org/index.php?thread/42307-omv-6-x-rc1-active-directory/
 
 
-Źródła:
+**Źródła:**
 - dołączenie serwera do domeny: https://forum.openmediavault.org/index.php?thread/42307-omv-6-x-rc1-active-directory/

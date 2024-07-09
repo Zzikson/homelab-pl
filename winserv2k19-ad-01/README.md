@@ -7,12 +7,12 @@
 **System był konfigurowany w języku angielskim**
 
 **Panel sterowania:**
-- zmieniono opcje UAC na *Always notify* (System and Security -> Security and Maintenance -> Security -> Change settings)
-- zmieniono strefę czasową na: *(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna* (win + s (skrót klawiszowy) -> (wpisz) timedate.cpl -> ctrl + shift + enter(by uruchomić przystawkę jako administrator)
-- wyłączono network discovery (Network and Internet -> Network and Sharing Center -> Change advanced sharing settings -> Private, Guest or Public, Domain, zaznaczyć *Turn off network discovery*)
+- zmieniono opcje UAC na Always notify (System and Security -> Security and Maintenance -> Security -> Change settings)
+- zmieniono strefę czasową na: (UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna (win + s (skrót klawiszowy) -> (wpisz) timedate.cpl -> ctrl + shift + enter(by uruchomić przystawkę jako administrator)
+- wyłączono network discovery (Network and Internet -> Network and Sharing Center -> Change advanced sharing settings -> Private, Guest or Public, Domain, zaznaczyć Turn off network discovery)
 - utworzono nowego użytkownika do administracji: user (Computer Managment -> Local Users and Groups -> Users -> PPM -> New User):
-    - odhaczono: *User must change password at next logon*
-    - zaznaczono: *User cannot change password*
+    - odhaczono: User must change password at next logon
+    - zaznaczono: User cannot change password
 
 **Właściwości systemu (win + s -> View Advanced system settings):**
 - Computer Name:
@@ -20,18 +20,18 @@
         - Change -> 
 - Remote:
     - pozwolono na zdalne połączenie za pomocą RDP użytkownika: user
-        - *Allow remote connections to this computer*
-        - *Allow connections only from computers running Remote Desktop with Network Level Authentication*
-        - *Select Users* -> Add -> OK
+        - Allow remote connections to this computer
+        - Allow connections only from computers running Remote Desktop with Network Level Authentication
+        - Select Users -> Add -> OK
 
 
 **Konfiguracja IP (win + x -> Network Connections -> Change adapter options -> PPM na adapter -> Properties)**
 - wyłączono na interfejsie IPv6 (generowanie adresu link-local) (odhaczenie checkboxa: Internet Protocol Version 6)
 - wyłączono LLDP:
     - odhaczenie:
-        -*Microsoft LLDP Protocol Driver*
-        -*Link-Layer Topology Discovery Responder*
-        -*Link-Layer Topology Discovery Mapper I/O Driver*
+        -Microsoft LLDP Protocol Driver
+        -Link-Layer Topology Discovery Responder
+        -Link-Layer Topology Discovery Mapper I/O Driver
 **Adresacja IP (Double click -> Internet Protocol Version 4):**
 - ustawiono:
     - IP: 172.17.30.\[2-3]
@@ -40,7 +40,7 @@
     - DNS: 127.0.0.1, 172.17.17.1
 **W zakładce advanced -> WINS:**
     - wyłączono NetBIOS over TCP/IP (Enable LMHOSTS lookup - odhaczono, Disable NetBIOS over TCP/IP)
-- wyłączono automount (CMD): diskpart.exe -> *automount disable*
+- wyłączono automount (CMD): diskpart.exe -> automount disable
 - zainstalowano przeglądarkę Firefox
 - tylko podstawowe dane diagnostyczne będą przesyłane do Microsoftu
 
@@ -52,7 +52,7 @@
 
 **Konfiguracja domeny (Server Manager -> Flaga -> Promote this server to a domain controller):**
 - Deployment configuration
-    - *Add a new forrest*
+    - Add a new forrest
     - nazwa domeny: dziki.lab
 
 **Dodanie elementów do domeny:**
@@ -62,20 +62,20 @@
 - dodano jednostkę organizacyjną: new-users
 - dodano użytkownika zzikson w OU new-users:
     - kreator użytkownika:
-        - odhaczono: *User must change password at next logon*
-        - zaznaczono: *User cannot change password*
+        - odhaczono: User must change password at next logon
+        - zaznaczono: User cannot change password
     - właściwości:
     - godziny logowania Pon-Piąt 06:00-16:00 (Account -> Logon Hours)
     - logowanie jedynie za pomocą: DESKTOP-ADN0RLH (Account -> Log On To)
     - profil i folder domowy podłączony pod udostępniony folder SMB z serwera OpenMediaVault
-    - odznaczono *Enable remote control* (Remote control)
+    - odznaczono Enable remote control (Remote control)
 - dodano użytkownika server-share:
     - kreator użytkownika:
-        - odhaczono: *User must change password at next logon*
-        - zaznaczono: *User cannot change password*, *Password never expires*
+        - odhaczono: User must change password at next logon
+        - zaznaczono: User cannot change password, Password never expires
     - właściwości:
         - logowanie jedynie za pomocą: OPENMEDIAVAULT (Account -> Log On To)
-        - odznaczono: *Enable remote control* (Remote control)
+        - odznaczono: Enable remote control (Remote control)
 
 ## DNS
 
@@ -87,7 +87,7 @@
     - dodano forwarder: 172.17.17.1 (zakładka Forwarders)
 - właściwości strefy wyszukiwania do przodu (DNS -> AD-01 -> Forward Lookup Zones -> PPM \[Nazwa strefy] -> Properties)
     - wyłączono WINS (zakładka WINS):
-        - odhaczono: *Use WINS forward lookup*
+        - odhaczono: Use WINS forward lookup
 **Dodano rekordy DNS:**
 - dzikus -> 10.0.0.1 - A
 - dzikuss -> dzikus - CNAME
@@ -97,7 +97,7 @@
 **Dodanie partycji przeznaczonej na snapshot'y:**
 - zarządzanie dyskami:
     - system plików: NTFS
-    - etykieta: *Shaddow Copz*
+    - etykieta: Shaddow Copz
 
 **Konfiguracja Shadow Copy (Eksplorator plików -> PPM na dysk C: -> Configure Shadow Copies):**
 - zaznaczono dysk F:
@@ -121,7 +121,7 @@
 **Dodanie partycji przeznaczonej na udostępnione foldery:**
 - zarządzanie dyskami:
     - system plików: NTFS
-    - etykieta: *Shared Folders*
+    - etykieta: Shared Folders
 
 **Utworzono i udostępniono folder (PPM na utworzony folder -> Właściwości):**
 - W zakładce Sharing -> Advanced Sharing:
@@ -238,7 +238,7 @@ Zainstalowano na serwerze sterowniki
 
 **Konfiguracja WSUS (Kreator):**
 - Microsoft Update Improvement Program:
-    - odhaczono: *Yes I would like to join the Microsoft Update Improvement Program*
+    - odhaczono: Yes I would like to join the Microsoft Update Improvement Program
 - Specify proxy server:
     - Start Connecting
 - Choose Language:
@@ -266,7 +266,7 @@ Zainstalowano na serwerze sterowniki
         - Windows Live
         - Windows Small Business Server
         - Windows Subsystem for Linux
-        - *Works*
+        - Works
 - Choose Classification:
     - dodatkowo zaznaczono:
         - Feature Packs
@@ -304,22 +304,10 @@ Po instalacji serwera, podłączono go do domeny. Instalacja AD przebiegła tak 
 
 **Konfiguracja serwera (Server Manager -> Flaga -> Promote this server to a domain controller):**
 - Deployment configuration
-    - *Add a domain controller to an existing domain*
+    - Add a domain controller to an existing domain
     - Domain: dziki.lab
 - Additional Options:
     - Relicate from AD-01.dziki.lab
-- 
-
-#### DNS
-
-Dodałem politykę rozwiązywania nazw w domyślnym obiekcie GPO:
-
-Computer Configuration -> Windows Settings -> Name Resolution:
-
-Suffix: dziki.lab
-
-[x] Enable DNSEC in this rule
-[x] Require DNS clients to check that name and address data has been validated
 
 **Źródła:**
 - zmiana strefy czasowej: https://youtu.be/ZQmkBY3SgK8
@@ -328,5 +316,3 @@ Suffix: dziki.lab
 - serwer WSUS: https://youtu.be/VTCzszyiFz4
 - serwer wydruku: https://piped.adminforge.de/watch?v=xZY4C4zMHlw
 - sterowniki do drukarki: https://support.hp.com/pl-pl/drivers/samsung-ml-1675-laser-printer-series/19134532
-
-

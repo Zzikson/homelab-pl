@@ -1,6 +1,6 @@
-![Logo Proxmoxa](https://brands.home-assistant.io/_/proxmoxve/logo.png)
-
 # Konfiguracja hipernadzorcy - Proxmox
+
+![Logo Proxmoxa](https://brands.home-assistant.io/_/proxmoxve/logo.png)
 
 [TOCM]
 
@@ -23,13 +23,13 @@
     
 ## Obrazy dysków systemów
 
-Alpine Linux: https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-virt-3.20.0-x86_64.iso
+**Alpine Linux:** https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-virt-3.20.0-x86_64.iso
 
-OpenMediaVault: https://sourceforge.net/projects/openmediavault/files/iso/7.0-32/openmediavault_7.0-32-amd64.iso
+**OpenMediaVault:** https://sourceforge.net/projects/openmediavault/files/iso/7.0-32/openmediavault_7.0-32-amd64.iso
 
-OPNSense: https://mirror.ams1.nl.leaseweb.net/opnsense/releases/24.1/OPNsense-24.1-dvd-amd64.iso.bz2
+**OPNSense:** https://mirror.ams1.nl.leaseweb.net/opnsense/releases/24.1/OPNsense-24.1-dvd-amd64.iso.bz2
 
-Windows Server 2019: https://go.microsoft.com/fwlink/p/?LinkID=2195167&clcid=0x409&culture=en-us&country=US
+**Windows Server 2019:** https://go.microsoft.com/fwlink/p/?LinkID=2195167&clcid=0x409&culture=en-us&country=US
 
 ## Maszyny wirtualne
 
@@ -68,7 +68,7 @@ Windows Server 2019: https://go.microsoft.com/fwlink/p/?LinkID=2195167&clcid=0x4
     - dysk: 85GB
     - VLAN: 30
 
-## Źródła:
+**Źródła:**
 - https://pve.proxmox.com/pve-docs/pve-admin-guide.html
 - obrazy iso:
     - Alpine: https://www.alpinelinux.org/downloads/

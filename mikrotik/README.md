@@ -6,27 +6,29 @@
 
 ## Winbox 
 
-Przed przystąpieniem do konfiguracji zainstalowano WinBoxa według poradnika:
+Przed przystąpieniem do konfiguracji zainstalowano klient WinBox według poradnika:
 [![Jak zainstalować WinBox'a na Linuxie?](https://img.youtube.com/vi/2jjtK5Me29I/0.jpg)](https://www.youtube.com/watch?v=2jjtK5Me29I)
 
-Pobrano z repozytorium AUR w dystrybucji Arch Linux:
+Pobrano z repozytorium AUR na dystrybucji Arch Linux:
 ```bash
 yay -S winbox
 ```
 
 ## Początkowa konfiguracja
 
+Skonfigurowano według dokumentacji: https://help.mikrotik.com/docs/display/ROS/First+Time+Configuration
+
 - usunięto domyślną konfiguracje
-- nazwa mostka łączącego wszystkie porty: LAN BRIDGE
-- porty połączone w mostek: Ether2-Ether5 i WIFI 2.4GHz
+- nazwa mostka łączącego porty LAN: LAN BRIDGE
+- porty połączone w mostek: Ether2-Ether5, Wifi 2.4GHz Wifi5GHz
 - konfiguracja mostka: 172.17.7.1/25 (Sieć LAN)
 - adres interfejsu WAN (Ether1): Klient DHCP
-- adres wifi5ghz: 172.17.7.169/29
+- adres Wifi 5GHz: 172.17.7.169/29
 - DHCP:
     - interfejs: LAN BRIDGE
     - pula adresów: 172.17.7.2-127/25
-    - bramę ustawiłem jako adres routera
-    - DNS ustawiłem jako: adres routera i 94.140.14.14 (publiczny serwery AdGuard'a blokujący reklamy)
+    - bramę ustawiono jako adres routera
+    - DNS ustawiono jako: adres routera i 94.140.14.14 (publiczny serwery AdGuard'a blokujący reklamy)
     - dzierżawa adresu: 8 godzin
 - nowy użytkownik: 
     - pełen dostęp
@@ -132,7 +134,7 @@ yay -S winbox
 
 - utworzono konto na stronie ZeroTier'a: https://www.zerotier.com/
 - utworzono sieć
-- dodano urządzenia do administracji urządzeniem: laptop, telefon
+- dodano urządzenia do administracji routerem: laptop, telefon
 - pobrano pakiet ze strony Mikrotika - https://mikrotik.com/download:
     - ARM64 / AMPERE -> Extra packages 7.xx.x Stable
     - dodano pakiet do RouterOS
@@ -253,24 +255,24 @@ Zmienione podsieci i skonfigurowane VLANy:
 - porty w mostku Blackhole: Ether2-Ether4
 - dla każdego portu zmieniono im PVID: Bridge -> Ports -> VLAN -> PVID
 - dodano VLANy do mostka LAN BRIDGE w sekcji: Bridge -> VLANs
-    - 7, tagged: LAN BRIDGE, untagged: WIFI 2.4GHz
+    - 7, tagged: LAN BRIDGE, untagged: Wifi 2.4GHz
     - 17, tagged: LAN BRIDGE, untagged: Ether5
-    - 71, tagged: LAN BRIDGE, untagged: wifi5ghz
-    - 7, tagged: LAN BRIDGE, untagged: WIFI 2.4GHz
+    - 71, tagged: LAN BRIDGE, untagged: Wifi 5ghz
+    - 7, tagged: LAN BRIDGE, untagged: Wifi 2.4GHz
 - dodano VLANy do mostka Blackhole w sekcji: Bridge -> VLANs
     - 777, tagged: Blackhole, untagged: Ether2-Ether4
 - dodano VLANy do mostka LAN BRIDGE i Blackhole w sekcji: Interface (Konfiguracja tak samo jak w punktach powyżej):
-    - Lan-Bridge:
+    - LAN BRIDGE:
         - 07-VLAN-Guest-Wifi
         - 17-VLAN-Servers
-        - 71-VLAN-Managment
+        - 71-VLAN-Managmen
     - Blackhole:
         - 777-VLAN-Blackhole
 - dodano adresy do utworzonych wirtualnych interfejsów:
     - 172.17.7.1/25 - 07-VLAN-Guest-Wifi
     - 172.17.17.1/28 - 17-VLAN-Servers
     - 172.17.71.1/29 - 71-VLAN-Managment
-- zmieniono interfejs serwera DHCP z LAN Bridge na 07-VLAN-Guest-Wifi
+- zmieniono interfejs serwera DHCP z LAN BRIDGE Na 07-VLAN-Guest-Wifi
 - włączono opcje VLAN filtering na mostku: LAN BRIDGE
 
 VLANy są skonfigurowane by sieć gości nie miała dostępu do podsieci do zarządzania sprzętem oraz serwerami.
@@ -293,8 +295,7 @@ add action=drop chain=forward \
     - 172.17.20.0/28 -> 172.17.17.3
     - 172.17.30.0/28 -> 172.17.17.3
 
-## Źródła:
-
+**Źródła:**
 1. Dokumentacja: https://help.mikrotik.com/docs/
     - budowa zapory ogniowej:
         - https://help.mikrotik.com/docs/display/ROS/Building+Your+First+Firewall
